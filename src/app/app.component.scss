@@ -1,0 +1,116 @@
+.content{
+  .main{
+    .card{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .profile{
+      img{
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      border-radius: 15px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      align-content: center;
+      background-color: white;
+    }
+    .calculator{
+      input{
+        width: 260px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .buttons{
+        button{
+          width: 70px;
+          height: 70px;
+          background-color: rgba(0, 0, 0, 0.32);
+          border: #ffffff solid 1px;
+          color: white;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        button:last-child{
+          background-color: #f6950b;
+        }
+        button:active{
+          background-color: #d5d5d2;
+        }
+        button:last-child:active{
+          background-color: #545353;
+        }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      border-radius: 15px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      align-content: center;
+      background-color: white;
+    }
+    margin-top: 20px;
+  }
+  .header{
+    .left{
+      p{
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    .right{
+      .fa-github{
+        color: #3c3a3a;
+      }
+      .fa-instagram{
+        color: #e1306c;
+      }
+      .fa-twitter{
+        color: #1da1f2;
+      }
+      .fa-linkedin{
+        color: #0077b5;
+      }
+      width: 140px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
