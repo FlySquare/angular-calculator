@@ -13,10 +13,14 @@ export class AppComponent {
   itIsPositive = true;
 
   numbers(number: any) {
-    if(this.processOne === undefined) {
+    if(this.processOne === 0) {
       this.text = this.text !== '0' ? this.text + '' + number : number;
     }else{
-      this.text = number;
+      if(this.text !== '0'){
+        this.text = this.text + '' +number;
+      }else{
+        this.text = number;
+      }
       this.processTwo = this.text;
     }
   }
@@ -32,19 +36,43 @@ export class AppComponent {
   }
 
   plus() {
-    alert('plus');
+    if (this.processTwo === 0){
+      this.lastOperation = '+';
+      this.processOne = this.text;
+      this.text = ''
+    }else{
+      this.total();
+    }
   }
 
   minus() {
-    alert('minus');
+    if (this.processTwo === 0){
+      this.lastOperation = '-';
+      this.processOne = this.text;
+      this.text = ''
+    }else{
+      this.total();
+    }
   }
 
   multiply() {
-    alert('multiply');
+    if (this.processTwo === 0){
+      this.lastOperation = 'x';
+      this.processOne = this.text;
+      this.text = ''
+    }else{
+      this.total();
+    }
   }
 
   divide() {
-    alert('divide');
+    if (this.processTwo === 0){
+      this.lastOperation = '/';
+      this.processOne = this.text;
+      this.text = ''
+    }else{
+      this.total();
+    }
   }
 
   percent() {
@@ -54,11 +82,28 @@ export class AppComponent {
   }
 
   total() {
-    alert('total');
+    console.log('total');
+    if (this.lastOperation === '+'){
+      this.processOne = Number(this.processOne) + Number(this.text);
+    }else if (this.lastOperation === 'x'){
+      this.processOne = Number(this.processOne) * Number(this.text);
+    }else if (this.lastOperation === '-'){
+      this.processOne = Number(this.processOne) - Number(this.text);
+    }else if (this.lastOperation === '/'){
+      this.processOne = Number(this.processOne) / Number(this.text);
+    }
+    this.text = this.processOne.toString();
+    this.processTwo = 0;
+    console.log(this.processOne,'processOne');
+    console.log(this.processTwo,'processTwo');
+    console.log(this.lastOperation,'lastOperation');
   }
 
   clear() {
     this.text = '0';
+    this.processTwo = 0;
+    this.processOne = 0;
+    this.lastOperation = '';
     this.itIsPositive = true;
   }
 }
