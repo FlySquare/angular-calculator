@@ -76,7 +76,6 @@ export class AppComponent {
   }
 
   percent() {
-    alert('percent');
     this.processOne = Number(this.text)/100;
     this.text = this.processOne.toString();
   }

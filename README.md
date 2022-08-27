@@ -1,5 +1,7 @@
 # AngularCalculator
 
+### You can test it here: [Click For Test](https://iamumut.com/angular-calculator/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
